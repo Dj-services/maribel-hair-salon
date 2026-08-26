@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maribel Beauty Salon | Hair Salon in Roslindale, MA</title>
+<meta name="description" content="Maribel Beauty Salon is a welcoming hair and beauty salon at 4408 Washington St, Roslindale, MA. Rated 4.5 stars. Call (617) 942-7695 for services and availability.">
+<meta name="keywords" content="Maribel Beauty Salon, beauty salon Roslindale MA, hair salon Roslindale MA, beauty salon near Roslindale, hair stylist Roslindale, haircuts Roslindale MA, beauty salon near Boston, hair salon near Washington Street Roslindale">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Maribel Beauty Salon",
+  "image": "",
+  "telephone": "+16179427695",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4408 Washington St",
+    "addressLocality": "Roslindale",
+    "addressRegion": "MA",
+    "postalCode": "02131",
+    "addressCountry": "US"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "38"
+  }
+}
+</script>
+<style>
+  :root{
+    --cream:#FAF6FD;
+    --cream-deep:#F1E7FB;
+    --blush:#E4D2F7;
+    --rose:#C9A6ED;
+    --gold:#8B5CF6;
+    --gold-light:#A78BFA;
+    --pink:#EC4899;
+    --pink-light:#F9A8D4;
+    --brown:#141414;
+    --ink:#3A3A3A;
+    --white:#FFFFFF;
+    --shadow: 0 20px 50px -25px rgba(20,20,20,0.35);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Jost', sans-serif;
+    color:var(--brown);
+    background:var(--cream);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    color:var(--brown);
+    line-height:1.15;
+  }
+  a{text-decoration:none;color:inherit;}
+  img{max-width:100%;display:block;}
+  ul{list-style:none;}
+  .container{max-width:1180px;margin:0 auto;padding:0 28px;}
+  .eyebrow{
+    font-family:'Jost',sans-serif;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    font-size:0.72rem;
+    color:var(--gold);
+    font-weight:600;
+  }
+  :focus-visible{outline:3px solid var(--gold); outline-offset:3px;}
+
+  /* Signature flourish: a hand-drawn brush-stroke underline, used consistently
+     beneath section headings as a stylist's finishing flourish */
+  .flourish{
+    display:block;
+    width:140px;
+    height:18px;
+    margin-top:10px;
+  }
+  .flourish path{
+    fill:none;
+    stroke:var(--gold);
+    stroke-width:3;
+    stroke-linecap:round;
+  }
+  .center .flourish{margin-left:auto;margin-right:auto;}
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(255,245,248,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(20,20,20,0.08);
+  }
+  nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 28px;
+    max-width:1180px; margin:0 auto;
+  }
+  .logo{
+    font-family:'Fraunces',serif;
+    font-size:1.35rem;
+    font-weight:600;
+    letter-spacing:0.01em;
+  }
+  .logo span{color:var(--gold);}
+  .nav-links{display:flex; gap:34px; align-items:center;}
+  .nav-links a{
+    font-size:0.92rem;
+    letter-spacing:0.02em;
+    position:relative;
+    padding:4px 0;
+  }
+  .nav-links a::after{
+    content:"";
+    position:absolute; left:0; bottom:-2px;
+    width:0%; height:1.5px; background:var(--gold);
+    transition:width 0.25s ease;
+  }
+  .nav-links a:hover::after{width:100%;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Jost',sans-serif;
+    font-weight:500; font-size:0.9rem;
+    padding:12px 26px;
+    border-radius:999px;
+    transition:all 0.25s ease;
+    border:1.5px solid transparent;
+    white-space:nowrap;
+  }
+  .btn-primary{
+    background:var(--brown); color:var(--cream);
+  }
+  .btn-primary:hover{background:#000000; transform:translateY(-1px);}
+  .btn-outline{
+    border-color:var(--brown); color:var(--brown); background:transparent;
+  }
+  .btn-outline:hover{background:var(--brown); color:var(--cream);}
+  .btn-gold{
+    background:var(--gold); color:var(--white);
+  }
+  .btn-gold:hover{background:#5B21B6; transform:translateY(-1px);}
+  .nav-cta{display:flex; align-items:center; gap:14px;}
+  .menu-toggle{display:none; background:none; border:none; font-size:1.6rem; cursor:pointer; color:var(--brown);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:92vh;
+    display:flex; align-items:center;
+    overflow:hidden;
+  }
+  .hero-bg{
+    position:absolute; inset:0;
+    background-image:linear-gradient(180deg, rgba(20,20,20,0.15) 0%, rgba(20,20,20,0.55) 100%), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1740&auto=format&fit=crop');
+    background-size:cover; background-position:center 30%;
+  }
+  .hero-content{
+    position:relative; z-index:2;
+    max-width:640px;
+    padding:120px 28px 90px;
+    margin:0 auto; width:100%;
+    color:var(--cream);
+  }
+  .hero-content .eyebrow{color:var(--gold-light);}
+  .hero h1{
+    font-size:clamp(2.6rem, 6vw, 4.2rem);
+    color:var(--white);
+    margin-top:14px;
+    font-weight:500;
+  }
+  .hero h1 em{font-style:italic; color:var(--gold-light); font-weight:500;}
+  .hero p{
+    margin-top:20px;
+    font-size:1.15rem;
+    color:rgba(255,245,248,0.92);
+    max-width:480px;
+  }
+  .hero-actions{
+    margin-top:34px;
+    display:flex; flex-wrap:wrap; gap:16px;
+  }
+  .hero .btn-primary{background:var(--gold); color:var(--white);}
+  .hero .btn-primary:hover{background:#5B21B6;}
+  .hero .btn-outline{border-color:rgba(255,245,248,0.7); color:var(--cream);}
+  .hero .btn-outline:hover{background:rgba(255,245,248,0.15); color:var(--cream);}
+  .trust-strip{
+    margin-top:40px;
+    display:flex; align-items:center; gap:14px;
+    flex-wrap:wrap;
+  }
+  .stars{color:var(--pink); letter-spacing:2px; font-size:1.1rem;}
+  .trust-strip .divider-dot{opacity:0.5;}
+  .loc-label{
+    margin-top:10px;
+    font-size:0.85rem;
+    color:rgba(255,245,248,0.75);
+    letter-spacing:0.03em;
+  }
+
+  /* ---------- SECTION GENERIC ---------- */
+  section{padding:110px 0;}
+  .section-head{max-width:640px; margin-bottom:60px;}
+  .section-head.center{margin-left:auto; margin-right:auto; text-align:center;}
+  .section-head h2{font-size:clamp(2rem,4vw,2.7rem); margin-top:12px;}
+  .section-head p{margin-top:18px; font-size:1.05rem; color:var(--ink); max-width:560px;}
+  .center p{margin-left:auto; margin-right:auto;}
+
+  /* ---------- ABOUT ---------- */
+  .about{background:var(--white);}
+  .about-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center;
+  }
+  .about-copy p{margin-bottom:18px; color:var(--ink); font-size:1.05rem;}
+  .about-img{
+    position:relative;
+    border-radius:6px 60px 6px 60px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    aspect-ratio:4/5;
+  }
+  .about-img img{width:100%; height:100%; object-fit:cover;}
+
+  /* ---------- SERVICES ---------- */
+  .services{background:var(--cream-deep);}
+  .service-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:26px;
+  }
+  .service-card{
+    background:var(--white);
+    padding:38px 32px;
+    border-radius:14px;
+    box-shadow:0 12px 30px -20px rgba(20,20,20,0.25);
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+    border:1px solid rgba(124,58,237,0.15);
+  }
+  .service-card:hover{transform:translateY(-6px); box-shadow:var(--shadow);}
+  .service-icon{
+    width:46px; height:46px; margin-bottom:20px;
+    color:var(--gold);
+  }
+  .service-card h3{font-size:1.25rem; margin-bottom:10px;}
+  .service-card p{color:var(--ink); font-size:0.95rem;}
+  .services-note{
+    margin-top:44px;
+    text-align:center;
+    background:var(--white);
+    border:1px dashed var(--gold);
+    border-radius:14px;
+    padding:26px;
+    color:var(--ink);
+    font-size:0.98rem;
+  }
+  .services-note a{color:var(--gold); font-weight:600;}
+
+  /* ---------- WHY US ---------- */
+  .why{background:var(--white);}
+  .why-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:24px;
+  }
+  .why-card{
+    padding:34px 26px;
+    text-align:left;
+    border-radius:14px;
+    background:var(--cream);
+    position:relative;
+  }
+  .why-card h3{font-size:1.1rem; margin-bottom:10px; margin-top:16px;}
+  .why-card p{font-size:0.92rem; color:var(--ink);}
+  .why-mark{
+    font-family:'Fraunces',serif; font-style:italic;
+    font-size:1.6rem; color:var(--pink);
+  }
+
+  /* ---------- REVIEWS ---------- */
+  .reviews{
+    background:var(--brown);
+    color:var(--cream);
+  }
+  .reviews .eyebrow{color:var(--gold-light);}
+  .reviews .section-head h2{color:var(--white);}
+  .rating-block{
+    display:flex; align-items:baseline; gap:18px; margin-bottom:60px;
+    flex-wrap:wrap;
+  }
+  .rating-num{font-family:'Fraunces',serif; font-size:4rem; color:var(--gold-light);}
+  .rating-sub{color:rgba(255,245,248,0.75);}
+  .testimonial-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:28px;
+  }
+  .testimonial{
+    background:rgba(255,245,248,0.06);
+    border:1px solid rgba(255,245,248,0.14);
+    border-radius:14px;
+    padding:36px;
+  }
+  .testimonial .stars{color:var(--pink-light); margin-bottom:18px; display:block;}
+  .testimonial p{font-size:1.02rem; color:rgba(255,245,248,0.92); margin-bottom:20px;}
+  .testimonial cite{
+    font-style:normal; font-weight:600; color:var(--gold-light); font-size:0.9rem;
+  }
+  .reviews-cta{margin-top:48px; text-align:center;}
+
+  /* ---------- GALLERY ---------- */
+  .gallery{background:var(--cream-deep);}
+  .gallery-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); grid-auto-rows:220px; gap:18px;
+  }
+  .gallery-item{
+    position:relative; border-radius:10px; overflow:hidden;
+    background:linear-gradient(135deg, var(--blush), var(--pink-light));
+    display:flex; align-items:center; justify-content:center;
+  }
+  .gallery-item:nth-child(1){grid-row:span 2;}
+  .gallery-item:nth-child(4){grid-column:span 2;}
+  .gallery-placeholder{
+    text-align:center; color:rgba(20,20,20,0.55);
+    font-size:0.85rem; padding:10px;
+  }
+  .gallery-placeholder .icon{font-size:1.8rem; display:block; margin-bottom:8px;}
+  .gallery-note{
+    margin-top:30px; text-align:center; color:var(--ink); font-size:0.92rem;
+  }
+
+  /* ---------- LOCATION ---------- */
+  .location{background:var(--white);}
+  .loc-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;}
+  .loc-card{
+    background:var(--cream);
+    padding:42px;
+    border-radius:16px;
+  }
+  .loc-card h3{font-size:1.4rem; margin-bottom:18px;}
+  .loc-card address{font-style:normal; color:var(--ink); margin-bottom:6px; line-height:1.7;}
+  .loc-actions{display:flex; gap:14px; margin-top:28px; flex-wrap:wrap;}
+  .map-wrap{
+    border-radius:16px; overflow:hidden; box-shadow:var(--shadow);
+    aspect-ratio:4/3;
+  }
+  .map-wrap iframe{width:100%; height:100%; border:0;}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--cream-deep);}
+  .contact-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px;}
+  .contact-info h2{font-size:clamp(1.9rem,3.5vw,2.4rem);}
+  .contact-info p{color:var(--ink); margin-top:16px; margin-bottom:28px;}
+  .contact-phone{
+    font-family:'Fraunces',serif; font-size:2.1rem; color:var(--gold);
+    display:inline-block; margin-bottom:22px;
+  }
+  .contact-actions{display:flex; gap:14px; flex-wrap:wrap;}
+  form{
+    background:var(--white); padding:40px; border-radius:16px;
+    box-shadow:0 12px 30px -20px rgba(20,20,20,0.25);
+  }
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:18px;}
+  .field{display:flex; flex-direction:column; gap:6px; margin-bottom:18px;}
+  .field label{font-size:0.82rem; letter-spacing:0.04em; color:var(--ink); text-transform:uppercase;}
+  .field input, .field textarea{
+    border:1.5px solid rgba(20,20,20,0.15);
+    border-radius:8px; padding:12px 14px;
+    font-family:'Jost',sans-serif; font-size:0.95rem;
+    background:var(--cream);
+    color:var(--brown);
+  }
+  .field input:focus, .field textarea:focus{border-color:var(--gold); outline:none;}
+  form .btn{width:100%; justify-content:center; margin-top:6px;}
+
+  /* ---------- HOURS ---------- */
+  .hours{background:var(--white); text-align:center;}
+  .hours-card{
+    max-width:480px; margin:0 auto;
+    background:var(--brown); color:var(--cream);
+    padding:46px; border-radius:16px;
+  }
+  .hours-card h3{color:var(--gold-light); margin-bottom:14px;}
+  .hours-card p{color:rgba(255,245,248,0.85);}
+  .hours-card .btn{margin-top:22px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--brown); color:rgba(255,245,248,0.8); padding:70px 0 30px;}
+  .footer-grid{
+    display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:50px;
+    padding-bottom:50px; border-bottom:1px solid rgba(255,245,248,0.14);
+  }
+  .footer-brand .logo{color:var(--cream); font-size:1.3rem;}
+  .footer-brand p{margin-top:10px; font-style:italic; color:var(--gold-light); font-family:'Fraunces',serif;}
+  .footer-col h4{color:var(--cream); font-family:'Jost',sans-serif; font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:18px;}
+  .footer-col li{margin-bottom:10px; font-size:0.92rem;}
+  .footer-col a:hover{color:var(--gold-light);}
+  .footer-bottom{
+    padding-top:26px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    font-size:0.82rem; color:rgba(255,245,248,0.55);
+  }
+
+  /* ---------- MOBILE STICKY BAR ---------- */
+  .mobile-bar{
+    display:none;
+    position:fixed; bottom:0; left:0; right:0; z-index:200;
+    background:var(--brown);
+    padding:12px 18px;
+    box-shadow:0 -8px 24px rgba(0,0,0,0.2);
+  }
+  .mobile-bar-inner{display:flex; gap:12px;}
+  .mobile-bar a{
+    flex:1; text-align:center; padding:13px 0;
+    border-radius:999px; font-weight:500; font-size:0.92rem;
+    display:flex; align-items:center; justify-content:center; gap:8px;
+  }
+  .mobile-bar .call{background:var(--pink); color:var(--white);}
+  .mobile-bar .directions{background:rgba(255,245,248,0.1); color:var(--cream); border:1px solid rgba(255,245,248,0.3);}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:980px){
+    .about-grid, .loc-grid, .contact-grid{grid-template-columns:1fr;}
+    .service-grid{grid-template-columns:repeat(2,1fr);}
+    .why-grid{grid-template-columns:repeat(2,1fr);}
+    .testimonial-grid{grid-template-columns:1fr;}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .gallery-item:nth-child(1){grid-row:span 1;}
+    .gallery-item:nth-child(4){grid-column:span 1;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:720px){
+    .nav-links{display:none;}
+    .menu-toggle{display:block;}
+    .nav-cta .btn-outline{display:none;}
+    section{padding:70px 0;}
+    .service-grid, .why-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr; gap:34px;}
+    .form-row{grid-template-columns:1fr;}
+    .mobile-bar{display:block;}
+    body{padding-bottom:78px;}
+    .hero-content{padding-top:100px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important; animation:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#" class="logo">Maribel <span>Beauty Salon</span></a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-outline" style="display:none" id="navGetDirections">Get Directions</a>
+      <a href="tel:+16179427695" class="btn btn-primary">📞 Call Now</a>
+    </div>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="home" style="padding-top:0;">
+    <div class="hero-bg" role="img" aria-label="Stylist working on a client's hair in a warm salon setting"></div>
+    <div class="hero-content">
+      <span class="eyebrow">Roslindale, Massachusetts</span>
+      <h1>Beautiful Hair. <br><em>Beautiful You.</em></h1>
+      <p>Discover a welcoming beauty salon in Roslindale dedicated to helping you look and feel your best.</p>
+      <div class="hero-actions">
+        <a href="tel:+16179427695" class="btn btn-primary">Call (617) 942-7695</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Maribel+Beauty+Salon+4408+Washington+St+Roslindale+MA+02131" target="_blank" rel="noopener" class="btn btn-outline">Get Directions</a>
+      </div>
+      <div class="trust-strip">
+        <span class="stars">★★★★★</span>
+        <span>4.5 Stars <span class="divider-dot">•</span> 38 Reviews</span>
+      </div>
+      <p class="loc-label">4408 Washington St • Roslindale, MA</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-copy">
+        <span class="eyebrow">About the Salon</span>
+        <h2>A Welcoming Salon Experience</h2>
+        <svg class="flourish" viewBox="0 0 140 18"><path d="M2 12 C 30 2, 45 18, 70 9 S 120 2, 138 10"/></svg>
+        <p style="margin-top:24px;">At Maribel Beauty Salon, every visit starts with a warm hello. Our neighborhood salon on Washington Street is built around one simple idea: you should leave feeling comfortable, cared for, and confident in your hair.</p>
+        <p>Clients describe the salon as a friendly, relaxed space where their stylist takes the time to listen — whether that means a fresh haircut, a color refresh, or a treatment tailored to their hair's needs.</p>
+        <p>It's the kind of place where you're greeted by name, not just a number on a schedule — the welcoming experience our neighbors write about again and again.</p>
+        <a href="tel:+16179427695" class="btn btn-primary" style="margin-top:12px;">Call Us Today</a>
+      </div>
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1200&auto=format&fit=crop" alt="Salon stylist styling a client's hair at Maribel Beauty Salon">
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">What We Offer</span>
+        <h2>Our Services</h2>
+        <svg class="flourish" viewBox="0 0 140 18"><path d="M2 12 C 30 2, 45 18, 70 9 S 120 2, 138 10"/></svg>
+        <p>From everyday haircuts to color transformations, our team is here to help you find the look that feels like you.</p>
+      </div>
+      <div class="service-grid">
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 3l6 18 6-18M6 3c0 3 2 4 6 4s6-1 6-4"/></svg>
+          <h3>Haircuts</h3>
+          <p>Precision cuts for every hair type, tailored to the shape and style you want.</p>
+        </div>
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="8"/><path d="M8 12c1-2 2.5-3 4-3s3 1 4 3"/></svg>
+          <h3>Hair Styling</h3>
+          <p>Blowouts and styling for everyday looks or special occasions.</p>
+        </div>
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c-4 4-6 8-6 11a6 6 0 0012 0c0-3-2-7-6-11z"/></svg>
+          <h3>Hair Care</h3>
+          <p>Nourishing treatments that support healthy, resilient hair.</p>
+        </div>
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 12c2-6 6-9 8-9s6 3 8 9-3 9-8 9-10-3-8-9z"/></svg>
+          <h3>Hair Color</h3>
+          <p>Full color, highlights, and dimensional color designed around you.</p>
+        </div>
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0112 6a5.5 5.5 0 019.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg>
+          <h3>Hair Treatments</h3>
+          <p>Restorative treatments to refresh and strengthen your hair.</p>
+        </div>
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l2.4 6.9L22 10l-5.8 4.3L18 22l-6-4-6 4 1.8-7.7L2 10l7.6-1.1z"/></svg>
+          <h3>Beauty Services</h3>
+          <p>Additional beauty services to round out your visit.</p>
+        </div>
+      </div>
+      <div class="services-note">
+        For current services and pricing, please call the salon directly at <a href="tel:+16179427695">(617) 942-7695</a>.
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Why Clients Choose Us</span>
+        <h2>The Maribel Difference</h2>
+        <svg class="flourish" viewBox="0 0 140 18"><path d="M2 12 C 30 2, 45 18, 70 9 S 120 2, 138 10"/></svg>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <span class="why-mark">“</span>
+          <h3>Welcoming Environment</h3>
+          <p>Customers describe the salon as comfortable and welcoming from the moment they walk in.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-mark">“</span>
+          <h3>Professional Service</h3>
+          <p>Clients consistently mention professional, quick, and efficient service.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-mark">“</span>
+          <h3>Hair Care</h3>
+          <p>Personalized attention to different hair types and hair needs, visit to visit.</p>
+        </div>
+        <div class="why-card">
+          <span class="why-mark">“</span>
+          <h3>Local & Personal</h3>
+          <p>A neighborhood beauty destination rooted in Roslindale, Boston.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <span class="eyebrow">Social Proof</span>
+      <div class="section-head" style="margin-top:6px;">
+        <h2>What Our Clients Say</h2>
+      </div>
+      <div class="rating-block">
+        <span class="rating-num">4.5 / 5</span>
+        <span class="rating-sub">based on 38 customer reviews</span>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <span class="stars">★★★★★</span>
+          <p>"Enjoyed my service! I have type 4C colored hair... She was professional, quick and efficient! I've never been so happy and my hair never looked so good."</p>
+          <cite>— Lyvenie St. Pierre</cite>
+        </div>
+        <div class="testimonial">
+          <span class="stars">★★★★★</span>
+          <p>"Maribel and her crew made it a welcoming and comfortable experience for her. I'd definitely go back."</p>
+          <cite>— Obed Daphnis</cite>
+        </div>
+      </div>
+      <div class="reviews-cta">
+        <a href="#" class="btn btn-gold">See Our Reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Our Work</span>
+        <h2>Beauty in Every Detail</h2>
+        <svg class="flourish" viewBox="0 0 140 18"><path d="M2 12 C 30 2, 45 18, 70 9 S 120 2, 138 10"/></svg>
+        <p>A look at the salon and the styles our clients love. Photos below are placeholders — swap in real salon photography anytime.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item"><div class="gallery-placeholder"><span class="icon">✂️</span>Haircuts</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder"><span class="icon">💇‍♀️</span>Hairstyles</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder"><span class="icon">✨</span>Transformations</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder"><span class="icon">🎨</span>Hair Color</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder"><span class="icon">🏠</span>Salon Atmosphere</div></div>
+        <div class="gallery-item"><div class="gallery-placeholder"><span class="icon">💫</span>Finished Looks</div></div>
+      </div>
+      <p class="gallery-note">Owner note: replace these placeholder tiles with real photos of the salon and finished looks.</p>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="location">
+    <div class="container loc-grid">
+      <div class="loc-card">
+        <span class="eyebrow">Find Us</span>
+        <h3 style="margin-top:10px;">Visit Us in Roslindale</h3>
+        <p style="color:var(--ink); margin-bottom:20px;">Maribel Beauty Salon</p>
+        <address>
+          4408 Washington St<br>
+          Roslindale, MA 02131<br>
+          <a href="tel:+16179427695" style="color:var(--gold); font-weight:600;">(617) 942-7695</a>
+        </address>
+        <div class="loc-actions">
+          <a href="https://www.google.com/maps/search/?api=1&query=Maribel+Beauty+Salon+4408+Washington+St+Roslindale+MA+02131" target="_blank" rel="noopener" class="btn btn-primary">Get Directions</a>
+          <a href="tel:+16179427695" class="btn btn-outline">Call Now</a>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe title="Map to Maribel Beauty Salon" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=4408+Washington+St,+Roslindale,+MA+02131&output=embed">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS -->
+  <section class="hours">
+    <div class="container">
+      <div class="hours-card">
+        <h3>Hours</h3>
+        <p>Please call for current hours and availability.</p>
+        <a href="tel:+16179427695" class="btn btn-gold">(617) 942-7695</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <span class="eyebrow">Get In Touch</span>
+        <h2>Have a Question? Give Us a Call.</h2>
+        <p>We're happy to answer questions about services, availability, and what to expect for your visit.</p>
+        <a href="tel:+16179427695" class="contact-phone">(617) 942-7695</a>
+        <div class="contact-actions">
+          <a href="tel:+16179427695" class="btn btn-primary">Click to Call</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Maribel+Beauty+Salon+4408+Washington+St+Roslindale+MA+02131" target="_blank" rel="noopener" class="btn btn-outline">Directions</a>
+        </div>
+        <p style="margin-top:28px; font-size:0.92rem;">4408 Washington St, Roslindale, MA 02131</p>
+      </div>
+      <form id="inquiryForm">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us what you're looking for..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">Maribel Beauty Salon</a>
+        <p>Beautiful Hair. Beautiful You.</p>
+        <p style="font-style:normal; font-family:'Jost',sans-serif; color:rgba(255,245,248,0.7); margin-top:16px; font-size:0.92rem;">
+          4408 Washington St<br>Roslindale, MA 02131<br>
+          <a href="tel:+16179427695">(617) 942-7695</a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="tel:+16179427695">Call Now</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Maribel+Beauty+Salon+4408+Washington+St+Roslindale+MA+02131" target="_blank" rel="noopener">Get Directions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Maribel Beauty Salon. All rights reserved.</span>
+      <span>Roslindale, Boston, Massachusetts</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY BAR -->
+<div class="mobile-bar">
+  <div class="mobile-bar-inner">
+    <a href="tel:+16179427695" class="call">📞 Call</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Maribel+Beauty+Salon+4408+Washington+St+Roslindale+MA+02131" target="_blank" rel="noopener" class="directions">📍 Directions</a>
+  </div>
+</div>
+
+<script>
+  // Simple mobile menu toggle: reveal nav links as a stacked panel
+  const toggle = document.querySelector('.menu-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = links.style.display === 'flex';
+    links.style.display = open ? 'none' : 'flex';
+    links.style.flexDirection = 'column';
+    links.style.position = 'absolute';
+    links.style.top = '100%';
+    links.style.left = '0';
+    links.style.right = '0';
+    links.style.background = 'var(--cream)';
+    links.style.padding = '20px 28px';
+    links.style.gap = '18px';
+    links.style.borderBottom = '1px solid rgba(20,20,20,0.08)';
+  });
+
+  // Contact form: no backend booking/scheduling — general inquiry only
+  document.getElementById('inquiryForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Thanks for reaching out! For the fastest response, please call us directly at (617) 942-7695.');
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
